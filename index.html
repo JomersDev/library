@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Book List</h1>
+        </div>
+        <div class="user-input">
+            <h2>Add a Book!</h2>
+            <form id="add-form">
+                <div class="book-title">
+                    <!-- <label for="title">Title:</label> -->
+                    <input type="text" id="title" name="title" required placeholder="Book Title">
+                </div>
+                <div class="book-author">
+                    <!-- <label for="author">Author:</label> -->
+                    <input type="text" id="author" name="author" required placeholder="Book Author">
+                </div>
+                <div class="book-pages">
+                    <!-- <label for="pages">Pages:</label> -->
+                    <input type="number" id="pages" name="pages" required placeholder="How many pages?">
+                </div>
+                <div class="book-read">
+                    <!-- <label for="read">Read:</label> -->
+                    <!-- <input type="text" id="read" name="read" required placeholder="Has this been read?"> -->
+                    <input type="checkbox" id="read" name="read">
+                    <label for="read"> I have read this book!</label>
+                </div>
+                <div class="book-submit">
+                    <input type="submit" value="Submit" required>
+                </div>
+              </form>
+        </div>
+        <div class="books">
+
+        </div>
+    </div>
+</body>
+</html>
