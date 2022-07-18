@@ -104,6 +104,36 @@ addForm.addEventListener('submit', function(e) {
     addBookToLibrary(bookTitle, bookAuthor, bookPages, bookRead);
 });
 
+//Javascript Form Validation
+(function javascriptFormValidation() {
+    //Book title validation
+    const formTitle = document.getElementById("title");
+
+    formTitle.addEventListener('input', () => {
+        formTitle.setCustomValidity('');
+        formTitle.checkValidity();
+    });
+    
+    formTitle.addEventListener('invalid', () => {
+        if (formTitle.value === '') {
+            formTitle.setCustomValidity('Please enter a Book title');
+        }
+    });
+    
+    //Book Author validation
+    const formAuthor = document.getElementById("author");
+    
+    formAuthor.addEventListener('input', () => {
+        formAuthor.setCustomValidity('');
+        formAuthor.checkValidity();
+    });
+    
+    formAuthor.addEventListener('invalid', () => {
+        if (formAuthor.value === '') {
+            formAuthor.setCustomValidity('Please enter the Author');
+        }
+    });
+})();
 
 //testing that the addBookToLibrary function works correctly
 
